@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".AddFragment">
+    <data>
+        <variable
+            name="addFragment"
+            type="com.example.rehber.AddFragment" />
+    </data>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+
+android:gravity="center"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/editTextNam"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Adınızı girin"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/editTextNumbe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Telefon numaranızı girin"
+        android:inputType="phone"/>
+
+    <Button
+        android:id="@+id/buttonSav"
+        android:layout_width="match_parent"
+        android:onClick="@{() -> addFragment.personSave(editTextNam.getText().toString(), editTextNumbe.getText().toString())}"
+        android:layout_height="wrap_content"
+        android:text="Kaydet"/>
+
+</LinearLayout>
+</layout>
+
